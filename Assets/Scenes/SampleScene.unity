@@ -396,6 +396,7 @@ GameObject:
   - component: {fileID: 523714409}
   - component: {fileID: 523714413}
   - component: {fileID: 523714414}
+  - component: {fileID: 523714415}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -620,7 +621,7 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
-  m_DefaultActionMap: 
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &523714414
@@ -635,7 +636,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17fe88a2887a6d84d9f853db9daeedb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  moveSpeed: 2
+  moveSpeed: 3
+--- !u!95 &523714415
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523714408}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0d387e8e6973c2141b6ef4ce2a8b2c0b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &589300596
 GameObject:
   m_ObjectHideFlags: 0
