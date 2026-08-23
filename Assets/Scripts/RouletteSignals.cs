@@ -91,4 +91,10 @@ public class RouletteSignals : MonoBehaviour
             newWave.GetComponent<SoundWave>().signalIndex = _selectedSection;
         }
     }
+    
+    // Allows other scripts to know which section/index is currently selected
+    public int GetCurrentSelectedIndex()
+    {
+        return _selectedSection;
+    }
 }

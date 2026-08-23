@@ -7,8 +7,13 @@ public class OtterController : MonoBehaviour
     public float moveSpeed = 5f;
     
     private bool _isMoving = false;
+    private Rigidbody2D _rb;
 
-    // The Otter still uses this to "hear" the expanding Sound Wave
+    void Start()
+    {
+        _rb = GetComponent<Rigidbody2D>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (_isMoving) return; 
@@ -16,44 +21,62 @@ public class OtterController : MonoBehaviour
         SoundWave incomingWave = collision.GetComponent<SoundWave>();
         if (incomingWave != null)
         {
-            // If the signal is 0 (Attract), walk smoothly towards it
             if (incomingWave.signalIndex == 0)
             {
-                StartCoroutine(WalkToTarget(incomingWave.transform.position));
+                StartCoroutine(WalkToTarget(incomingWave.transform.position, true));
+            }
+            else if (incomingWave.signalIndex == 1)
+            {
+                StartCoroutine(WalkToTarget(incomingWave.transform.position, false));
             }
         }
     }
 
-    private IEnumerator WalkToTarget(Vector3 target)
+    private IEnumerator WalkToTarget(Vector3 targetPos, bool shouldAttract)
     {
         _isMoving = true;
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
 
-        // Keep moving until we are really close to the center of the sound
-        while (Vector3.Distance(transform.position, target) > 0.1f)
+        Vector3 finalTarget = targetPos;
+        if (!shouldAttract)
         {
-            Vector3 newPos = Vector3.MoveTowards(transform.position, target, moveSpeed * Time.deltaTime);
-            
-            // MovePosition forces the physics engine to handle the movement, ensuring hard collisions!
-            rb.MovePosition(newPos);
+            Vector3 directionAway = (transform.position - targetPos).normalized;
+            finalTarget = transform.position + (directionAway * 3f);
+        }
+
+        // Usamos un temporizador de seguridad por si la ruta se bloquea por completo
+        float safetyTimer = 0f;
+        float maxTime = 3f; // Tiempo máximo que intentará caminar antes de liberarse solo
+
+        while (Vector3.Distance(transform.position, finalTarget) > 0.1f && safetyTimer < maxTime)
+        {
+            safetyTimer += Time.deltaTime;
+            Vector3 newPos = Vector3.MoveTowards(transform.position, finalTarget, moveSpeed * Time.deltaTime);
+            _rb.MovePosition(newPos);
             
             yield return new WaitForFixedUpdate();
         }
 
+        // Liberamos el movimiento al llegar o al cumplirse el tiempo de seguridad
         _isMoving = false;
     }
-    
-    // This built-in Unity function detects hits with SOLID objects (like your invisible walls)
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        // Si chocamos contra cualquier cosa sólida, detenemos el viaje de inmediato
         if (_isMoving)
         {
-            // We hit a wall! Cancel the WalkToTarget loop immediately.
-            StopAllCoroutines(); 
-            
-            // Reset the movement state so the otter can listen to the next sound
+            StopAllCoroutines();
             _isMoving = false; 
         }
     }
-}
 
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        // Si la nutria se queda rozando la pared, nos aseguramos de que no se quede bloqueada
+        if (_isMoving)
+        {
+            StopAllCoroutines();
+            _isMoving = false;
+        }
+    }
+}
