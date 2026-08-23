@@ -488,8 +488,17 @@ MonoBehaviour:
   introSteps:
   - dialogText: Pute 1 2 3
     sceneImage: {fileID: 0}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 0}
   gameSceneName: GameScene
   charactersPerSecond: 40
+  sceneHasMusic: 1
+  musicIntroSource: {fileID: 0}
+  musicLoopSource: {fileID: 0}
+  sfxSource: {fileID: 0}
+  musicVolume: 1
+  sfxVolume: 1
 --- !u!1 &959922645
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,53 +533,119 @@ MonoBehaviour:
   introSteps:
   - dialogText: "Ha sido un d\xEDa complicado.   "
     sceneImage: {fileID: -7203065017428671067, guid: 94e41d1d994ea1541a0d20b53b05d9e1, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 0}
   - dialogText: "He dejado algunas de nutrias en observaci\xF3n.   "
     sceneImage: {fileID: -7203065017428671067, guid: 94e41d1d994ea1541a0d20b53b05d9e1, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 0}
   - dialogText: "El centro veterinario de animales ex\xF3ticos checara que todo est\xE9
       en orden. "
     sceneImage: {fileID: -7203065017428671067, guid: 94e41d1d994ea1541a0d20b53b05d9e1, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 0}
   - dialogText: "Es importante el bienestar de nuestras nutrias. \n"
     sceneImage: {fileID: -7203065017428671067, guid: 94e41d1d994ea1541a0d20b53b05d9e1, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 0}
   - dialogText: '[...]'
     sceneImage: {fileID: 4404463660298938568, guid: 94fee9ff9d421ea418b605fe9aaa77b1, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 0}
   - dialogText: "Qu\xE9 bueno que volv\xED a casa. Me espera el almuercito. \n"
     sceneImage: {fileID: 4404463660298938568, guid: 94fee9ff9d421ea418b605fe9aaa77b1, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 0}
   - dialogText: "Seguro mi hermano est\xE1 haciendo ese extra\xF1o ruido... "
     sceneImage: {fileID: 4404463660298938568, guid: 94fee9ff9d421ea418b605fe9aaa77b1, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 0}
   - dialogText: "Deber\xEDa ir a buscarlo. "
     sceneImage: {fileID: 4404463660298938568, guid: 94fee9ff9d421ea418b605fe9aaa77b1, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 0}
   - dialogText: 'Vaya debo ir al nutriario. Mi hermano me espera.  '
     sceneImage: {fileID: -5801844998792894769, guid: 1f317d8dd1758944d9e14a642364a56b, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 0}
   - dialogText: "(Cada vez... ese ruido se intensifica y se vuelve m\xE1s molesto.
       Estoy seguro de que \xE9l lo est\xE1 ocasionando.)\n"
     sceneImage: {fileID: -5801844998792894769, guid: 1f317d8dd1758944d9e14a642364a56b, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 0}
   - dialogText: "Oh, Dios m\xEDo... \xA1una nave espacial! "
     sceneImage: {fileID: -1051103410883904380, guid: 2d18f12d72f63eb4889e05cfb4759a6a, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 0}
   - dialogText: "Seguro mi hermano este ah\xED, junto con las nutrias de la reserva
       natural. "
     sceneImage: {fileID: -1051103410883904380, guid: 2d18f12d72f63eb4889e05cfb4759a6a, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 0}
   - dialogText: "... podr\xEDa llamar a la polic\xEDa, pero... \xBFme creer\xEDan?
       O siquiera.... "
     sceneImage: {fileID: -1051103410883904380, guid: 2d18f12d72f63eb4889e05cfb4759a6a, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 0}
   - dialogText: "\xBFLlegar\xEDan a tiempo para rescatarlos? \n"
     sceneImage: {fileID: -1051103410883904380, guid: 2d18f12d72f63eb4889e05cfb4759a6a, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 0}
   - dialogText: "... Lo mejor ser\xEDa acercarme y morar que puedo hacer. \n"
     sceneImage: {fileID: -1051103410883904380, guid: 2d18f12d72f63eb4889e05cfb4759a6a, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 0}
   - dialogText: "\xBFComo podre rescatarlos? "
     sceneImage: {fileID: -1669053993245891546, guid: 9665427bcaf85da419f877d074ae8dff, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 0}
   - dialogText: "Eh y ese ruido... es una \xA1nutria! "
     sceneImage: {fileID: -1669053993245891546, guid: 9665427bcaf85da419f877d074ae8dff, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 0}
   - dialogText: "Podr\xEDa comunicarme con ella y tal vez decida ayudarme. Si se
       metiera en esta alcantarilla podr\xEDa traerme los datos que necesito. "
     sceneImage: {fileID: -1669053993245891546, guid: 9665427bcaf85da419f877d074ae8dff, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 0}
   - dialogText: "La ubicaci\xF3n de mi hermano y las nutrias.... De los aliens para
       m\xE1s adelante evitarlos y hacer el rescate. "
     sceneImage: {fileID: -1669053993245891546, guid: 9665427bcaf85da419f877d074ae8dff, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 0}
   - dialogText: "... Ahora, tendr\xE9 que indicarle que se mueva con el sonido por
       dichas tuber\xEDas."
     sceneImage: {fileID: -1669053993245891546, guid: 9665427bcaf85da419f877d074ae8dff, type: 3}
-  gameSceneName: GameScene
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 0}
+  gameSceneName: OtterVsRats
   charactersPerSecond: 40
+  sceneHasMusic: 1
+  musicIntroSource: {fileID: 0}
+  musicLoopSource: {fileID: 0}
+  sfxSource: {fileID: 0}
+  musicVolume: 1
+  sfxVolume: 1
 --- !u!4 &959922647
 Transform:
   m_ObjectHideFlags: 0
