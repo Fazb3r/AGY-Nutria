@@ -30,6 +30,15 @@ public class OtterController : MonoBehaviour
                 StartCoroutine(WalkToTarget(incomingWave.transform.position, false));
             }
         }
+        if (incomingWave.signalIndex == 0)
+        {
+            StartCoroutine(WalkToTarget(incomingWave.transform.position, true));
+        }
+        else if (incomingWave.signalIndex == 1)
+        {
+            StartCoroutine(WalkToTarget(incomingWave.transform.position, false));
+        }
+// El índice 2 no hace nada aquí, solo lo escucha la rata   
     }
 
     private IEnumerator WalkToTarget(Vector3 targetPos, bool shouldAttract)
