@@ -4,52 +4,59 @@ using System.Collections;
 
 public class RatController : MonoBehaviour
 {
-    [Header("Patrol Settings")]
-    public float patrolDistance = 2f;
-    public float patrolSpeed = 2f;
-    public float attractSpeed = 4f;
+    [Header("Movement Settings")]
+    public float patrolSpeed = 2.5f;
+    public float luredSpeed = 0.2f;
+    public float lureDuration = 300f;
+    public float inspectDuration = 2f;
 
-    private Vector3 _startPosition;
-    private bool _movingUp = true;
+    [Tooltip("1 to start moving UP, -1 to start moving DOWN")]
+    public float startDirectionY = 1f;
+
+    private float _currentDirectionY;
     private bool _isAttracted = false;
     private Rigidbody2D _rb;
+    private SpriteRenderer _spriteRenderer;
     private Coroutine _moveCoroutine;
 
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _startPosition = transform.position;
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _currentDirectionY = Mathf.Sign(startDirectionY);
+        UpdateSpriteFlip();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        // Solo patrulla si no está siendo atraída por una señal
         if (!_isAttracted)
         {
-            Patrol();
+            Vector2 movement = new Vector2(0, _currentDirectionY * patrolSpeed * Time.fixedDeltaTime);
+            _rb.MovePosition(_rb.position + movement);
         }
     }
 
-    private void Patrol()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        float topLimit = _startPosition.y + patrolDistance;
-        float bottomLimit = _startPosition.y - patrolDistance;
+        if (collision.gameObject.GetComponent<OtterController>() != null)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            return;
+        }
 
-        if (_movingUp)
+        if (_isAttracted)
         {
-            transform.position += Vector3.up * patrolSpeed * Time.deltaTime;
-            if (transform.position.y >= topLimit) _movingUp = false;
+            if (_moveCoroutine != null) StopCoroutine(_moveCoroutine);
+            StartCoroutine(FinishAttractionEarly());
+            return;
         }
-        else
-        {
-            transform.position += Vector3.down * patrolSpeed * Time.deltaTime;
-            if (transform.position.y <= bottomLimit) _movingUp = true;
-        }
+
+        _currentDirectionY *= -1f;
+        UpdateSpriteFlip();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // 1. Detección de Onda Sonora (Índice 2)
         SoundWave incomingWave = collision.GetComponent<SoundWave>();
         if (incomingWave != null && incomingWave.signalIndex == 2)
         {
@@ -57,7 +64,6 @@ public class RatController : MonoBehaviour
             _moveCoroutine = StartCoroutine(MoveToSound(incomingWave.transform.position));
         }
 
-        // 2. Si toca a la nutria, reinicia el nivel
         if (collision.GetComponent<OtterController>() != null)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -67,24 +73,32 @@ public class RatController : MonoBehaviour
     private IEnumerator MoveToSound(Vector3 soundPos)
     {
         _isAttracted = true;
+        float timer = 0f;
 
-        while (Vector3.Distance(transform.position, soundPos) > 0.1f)
+        // Slow crawl toward the lure at 0.8f for up to lureDuration seconds
+        while (Vector3.Distance(transform.position, soundPos) > 0.2f && timer < lureDuration)
         {
-            Vector3 newPos = Vector3.MoveTowards(transform.position, soundPos, attractSpeed * Time.deltaTime);
+            timer += Time.deltaTime;
+            Vector3 newPos = Vector3.MoveTowards(transform.position, soundPos, luredSpeed * Time.deltaTime);
             _rb.MovePosition(newPos);
             yield return new WaitForFixedUpdate();
         }
 
-        yield return new WaitForSeconds(1.5f); // Se queda quieta investigando el sonido
-        _startPosition = transform.position; // Actualiza el punto central de su patrullaje
+        yield return new WaitForSeconds(inspectDuration);
         _isAttracted = false;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private IEnumerator FinishAttractionEarly()
     {
-        if (collision.gameObject.GetComponent<OtterController>() != null)
+        yield return new WaitForSeconds(inspectDuration);
+        _isAttracted = false;
+    }
+
+    private void UpdateSpriteFlip()
+    {
+        if (_spriteRenderer != null)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            _spriteRenderer.flipY = (_currentDirectionY < 0);
         }
     }
 }
