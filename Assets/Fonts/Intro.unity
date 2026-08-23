@@ -589,7 +589,7 @@ MonoBehaviour:
   - dialogText: "Oh, Dios m\xEDo... \xA1una nave espacial! "
     sceneImage: {fileID: -1051103410883904380, guid: 2d18f12d72f63eb4889e05cfb4759a6a, type: 3}
     musicIntro: {fileID: 8300000, guid: 7e9b603271d18504294c17ac2e32957d, type: 3}
-    musicLoop: {fileID: 8300000, guid: 4b6eec81cd814224683ef8b3ee182cf2, type: 3}
+    musicLoop: {fileID: 8300000, guid: ad3eba08239215f42a72064945d5168c, type: 3}
     sfx: {fileID: 0}
   - dialogText: "Seguro mi hermano este ah\xED, junto con las nutrias de la reserva
       natural. "
