@@ -478,7 +478,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 719300378}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 103fd55f6727907498fa298ef0a7208c, type: 3}
   m_Name: 
@@ -491,7 +491,7 @@ MonoBehaviour:
     musicIntro: {fileID: 0}
     musicLoop: {fileID: 0}
     sfx: {fileID: 0}
-  gameSceneName: GameScene
+  gameSceneName: OtterVsRats
   charactersPerSecond: 40
   sceneHasMusic: 1
   musicIntroSource: {fileID: 0}
@@ -536,21 +536,22 @@ MonoBehaviour:
   introSteps:
   - dialogText: "Ha sido un d\xEDa complicado.   "
     sceneImage: {fileID: -7203065017428671067, guid: 94e41d1d994ea1541a0d20b53b05d9e1, type: 3}
-    musicIntro: {fileID: 8300000, guid: 9e380062030d18149a6fae62cd8d8075, type: 3}
-    musicLoop: {fileID: 8300000, guid: 2d53c71e9850e76458e917ca98566a48, type: 3}
+    musicIntro: {fileID: 8300000, guid: bd9737dc0eeea514caae7ffbea2b7baa, type: 3}
+    musicLoop: {fileID: 8300000, guid: a8451014f02e8af4b9d21f20931726cb, type: 3}
     sfx: {fileID: 0}
-  - dialogText: "He dejado algunas de nutrias en observaci\xF3n.   "
+  - dialogText: "Dej\xE9 algunas de las nutrias en observaci\xF3n.   "
     sceneImage: {fileID: -7203065017428671067, guid: 94e41d1d994ea1541a0d20b53b05d9e1, type: 3}
     musicIntro: {fileID: 0}
     musicLoop: {fileID: 0}
-    sfx: {fileID: 0}
-  - dialogText: "El centro veterinario de animales ex\xF3ticos checara que todo est\xE9
+    sfx: {fileID: 8300000, guid: 894d1ce3265b99e49a433ad9c226231b, type: 3}
+  - dialogText: "Los veterinarios del centro de cuidados checar\xE1n que todo est\xE9
       en orden. "
     sceneImage: {fileID: -7203065017428671067, guid: 94e41d1d994ea1541a0d20b53b05d9e1, type: 3}
     musicIntro: {fileID: 0}
     musicLoop: {fileID: 0}
     sfx: {fileID: 0}
-  - dialogText: "Es importante el bienestar de nuestras nutrias. \n"
+  - dialogText: "Es muy importante el bienestar de nuestras nutrias. \n( T \u03C9
+      T )\n"
     sceneImage: {fileID: -7203065017428671067, guid: 94e41d1d994ea1541a0d20b53b05d9e1, type: 3}
     musicIntro: {fileID: 0}
     musicLoop: {fileID: 0}
@@ -558,90 +559,141 @@ MonoBehaviour:
   - dialogText: '[...]'
     sceneImage: {fileID: 4404463660298938568, guid: 94fee9ff9d421ea418b605fe9aaa77b1, type: 3}
     musicIntro: {fileID: 0}
-    musicLoop: {fileID: 0}
-    sfx: {fileID: 0}
-  - dialogText: "Qu\xE9 bueno que volv\xED a casa. Me espera el almuercito. \n"
+    musicLoop: {fileID: 8300000, guid: e52b7a41c9a80d84ab67b6b40644de6d, type: 3}
+    sfx: {fileID: 8300000, guid: f69d0ecfdf1dd0140ae7416969ef67fa, type: 3}
+  - dialogText: "Qu\xE9 bueno que volv\xED a casa. Me espera el almuercito. \nAlcanzo
+      a comer con calma y luego voy al Nutriario.\n"
     sceneImage: {fileID: 4404463660298938568, guid: 94fee9ff9d421ea418b605fe9aaa77b1, type: 3}
     musicIntro: {fileID: 0}
     musicLoop: {fileID: 0}
     sfx: {fileID: 0}
-  - dialogText: "Seguro mi hermano est\xE1 haciendo ese extra\xF1o ruido... "
+  - dialogText: "\xBFAh? Seguro mi hermano est\xE1 haciendo ese extra\xF1o ruido... "
     sceneImage: {fileID: 4404463660298938568, guid: 94fee9ff9d421ea418b605fe9aaa77b1, type: 3}
     musicIntro: {fileID: 0}
     musicLoop: {fileID: 0}
-    sfx: {fileID: 0}
+    sfx: {fileID: 8300000, guid: e37003a85656abd41ba48a918630df3b, type: 3}
   - dialogText: "Deber\xEDa ir a buscarlo. "
     sceneImage: {fileID: 4404463660298938568, guid: 94fee9ff9d421ea418b605fe9aaa77b1, type: 3}
     musicIntro: {fileID: 0}
     musicLoop: {fileID: 0}
     sfx: {fileID: 0}
-  - dialogText: 'Vaya debo ir al nutriario. Mi hermano me espera.  '
+  - dialogText: "Tengo que ir al nutriario. All\xE1 mi hermano me espera.  "
+    sceneImage: {fileID: -5801844998792894769, guid: 1f317d8dd1758944d9e14a642364a56b, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 8300000, guid: e37003a85656abd41ba48a918630df3b, type: 3}
+  - dialogText: "(Cada vez... ese ruido se intensifica y se vuelve m\xE1s molesto.)\n"
+    sceneImage: {fileID: -5801844998792894769, guid: 1f317d8dd1758944d9e14a642364a56b, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 8300000, guid: 4c78ce14b427a184095c720a62e1e458, type: 3}
+  - dialogText: "(Estoy seguro de que mi hermano lo est\xE1 ocasionando.)"
     sceneImage: {fileID: -5801844998792894769, guid: 1f317d8dd1758944d9e14a642364a56b, type: 3}
     musicIntro: {fileID: 0}
     musicLoop: {fileID: 0}
     sfx: {fileID: 0}
-  - dialogText: "(Cada vez... ese ruido se intensifica y se vuelve m\xE1s molesto.
-      Estoy seguro de que \xE9l lo est\xE1 ocasionando.)\n"
+  - dialogText: "(Tiene que ser \xE9l...)\n"
     sceneImage: {fileID: -5801844998792894769, guid: 1f317d8dd1758944d9e14a642364a56b, type: 3}
     musicIntro: {fileID: 0}
     musicLoop: {fileID: 0}
     sfx: {fileID: 0}
-  - dialogText: "Oh, Dios m\xEDo... \xA1una nave espacial! "
+  - dialogText: "Oh, Dios m\xEDo... \xA1\xBFQu\xE9?!  "
     sceneImage: {fileID: -1051103410883904380, guid: 2d18f12d72f63eb4889e05cfb4759a6a, type: 3}
     musicIntro: {fileID: 8300000, guid: 7e9b603271d18504294c17ac2e32957d, type: 3}
-    musicLoop: {fileID: 8300000, guid: 4b6eec81cd814224683ef8b3ee182cf2, type: 3}
+    musicLoop: {fileID: 8300000, guid: d8c298b7d2558e740aefab98b1767532, type: 3}
+    sfx: {fileID: 0}
+  - dialogText: "\xBF\xA1Una nave espacial!?"
+    sceneImage: {fileID: -1051103410883904380, guid: 2d18f12d72f63eb4889e05cfb4759a6a, type: 3}
+    musicIntro: {fileID: 8300000, guid: 7e9b603271d18504294c17ac2e32957d, type: 3}
+    musicLoop: {fileID: 8300000, guid: d8c298b7d2558e740aefab98b1767532, type: 3}
     sfx: {fileID: 0}
   - dialogText: "Seguro mi hermano este ah\xED, junto con las nutrias de la reserva
-      natural. "
+      natural."
     sceneImage: {fileID: -1051103410883904380, guid: 2d18f12d72f63eb4889e05cfb4759a6a, type: 3}
     musicIntro: {fileID: 0}
     musicLoop: {fileID: 0}
     sfx: {fileID: 0}
-  - dialogText: "... podr\xEDa llamar a la polic\xEDa, pero... \xBFme creer\xEDan?
+  - dialogText: No puede ser...
+    sceneImage: {fileID: -1051103410883904380, guid: 2d18f12d72f63eb4889e05cfb4759a6a, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 0}
+  - dialogText: "\xA1tengo que llamar a la polic\xEDa! \npero... \xBFme creer\xEDan?
       O siquiera.... "
     sceneImage: {fileID: -1051103410883904380, guid: 2d18f12d72f63eb4889e05cfb4759a6a, type: 3}
     musicIntro: {fileID: 0}
     musicLoop: {fileID: 0}
     sfx: {fileID: 0}
-  - dialogText: "\xBFLlegar\xEDan a tiempo para rescatarlos? \n"
+  - dialogText: "\xBFLlegar\xEDan a tiempo para rescatarlos?...\n"
     sceneImage: {fileID: -1051103410883904380, guid: 2d18f12d72f63eb4889e05cfb4759a6a, type: 3}
     musicIntro: {fileID: 0}
     musicLoop: {fileID: 0}
     sfx: {fileID: 0}
-  - dialogText: "... Lo mejor ser\xEDa acercarme y morar que puedo hacer. \n"
+  - dialogText: "...Lo mejor ser\xEDa acercarme y mirar que puedo hacer. \n\xA1No
+      los voy a abandonar!"
     sceneImage: {fileID: -1051103410883904380, guid: 2d18f12d72f63eb4889e05cfb4759a6a, type: 3}
     musicIntro: {fileID: 0}
     musicLoop: {fileID: 0}
     sfx: {fileID: 0}
-  - dialogText: "\xBFComo podre rescatarlos? "
+  - dialogText: "\xBFComo podr\xE9 rescatarlos? Esta nave parece un laberinto."
+    sceneImage: {fileID: -1669053993245891546, guid: 9665427bcaf85da419f877d074ae8dff, type: 3}
+    musicIntro: {fileID: 8300000, guid: bd9737dc0eeea514caae7ffbea2b7baa, type: 3}
+    musicLoop: {fileID: 8300000, guid: b8a70c065e03a54499ca49a920f63242, type: 3}
+    sfx: {fileID: 0}
+  - dialogText: No veo ninguna entrada o puerta...
+    sceneImage: {fileID: -1669053993245891546, guid: 9665427bcaf85da419f877d074ae8dff, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 8300000, guid: 894d1ce3265b99e49a433ad9c226231b, type: 3}
+  - dialogText: "Eh \xBFy ese ruido? ...es una \xA1nutria! "
+    sceneImage: {fileID: -3543112609142456716, guid: 3ebbfa68a898d184e8c40bc043a8f6fe, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 8300000, guid: b4c20d0e3a2138446b4832b94274ad04, type: 3}
+  - dialogText: "Parece estar tan asustada que se fu\xE9 corriendo hacia un tubo
+      de ventilaci\xF3n"
     sceneImage: {fileID: -1669053993245891546, guid: 9665427bcaf85da419f877d074ae8dff, type: 3}
     musicIntro: {fileID: 0}
     musicLoop: {fileID: 0}
     sfx: {fileID: 0}
-  - dialogText: "Eh y ese ruido... es una \xA1nutria! "
+  - dialogText: "Hey, esa parece ser la \xFAnica entrada."
     sceneImage: {fileID: -1669053993245891546, guid: 9665427bcaf85da419f877d074ae8dff, type: 3}
     musicIntro: {fileID: 0}
     musicLoop: {fileID: 0}
     sfx: {fileID: 0}
-  - dialogText: "Podr\xEDa comunicarme con ella y tal vez decida ayudarme. Si se
-      metiera en esta alcantarilla podr\xEDa traerme los datos que necesito. "
+  - dialogText: "Pero es demasiado estrecha para m\xED...\nOjal\xE1 pudiera pedirle
+      ayuda a esa nutria"
     sceneImage: {fileID: -1669053993245891546, guid: 9665427bcaf85da419f877d074ae8dff, type: 3}
     musicIntro: {fileID: 0}
     musicLoop: {fileID: 0}
     sfx: {fileID: 0}
-  - dialogText: "La ubicaci\xF3n de mi hermano y las nutrias.... De los aliens para
-      m\xE1s adelante evitarlos y hacer el rescate. "
-    sceneImage: {fileID: -1669053993245891546, guid: 9665427bcaf85da419f877d074ae8dff, type: 3}
+  - dialogText: "\xA1AH! \xA1UN ALIEN ME VI\xD3!"
+    sceneImage: {fileID: 474615884549285845, guid: 7f7180a36c289834bad153fb50ccb4d0, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 8300000, guid: 6ae62aeacae056641a7db4e9da454005, type: 3}
+  - dialogText: "\xBFpipirip\xED? \n\xA1pip\xEDripipi p\xE1rapa!"
+    sceneImage: {fileID: 474615884549285845, guid: 7f7180a36c289834bad153fb50ccb4d0, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 8300000, guid: 4b0c4969b52d2d643a62fb7b1b96afc4, type: 3}
+  - dialogText: "Ok... Este alien parece querer ayudarme, me mira con una sonrisa
+      tonta y me est\xE1 mostrando una tablet futurista"
+    sceneImage: {fileID: 474615884549285845, guid: 7f7180a36c289834bad153fb50ccb4d0, type: 3}
     musicIntro: {fileID: 0}
     musicLoop: {fileID: 0}
     sfx: {fileID: 0}
-  - dialogText: "... Ahora, tendr\xE9 que indicarle que se mueva con el sonido por
-      dichas tuber\xEDas."
-    sceneImage: {fileID: -1669053993245891546, guid: 9665427bcaf85da419f877d074ae8dff, type: 3}
+  - dialogText: "Me est\xE1 haciendo se\xF1as de que toque dispositivo"
+    sceneImage: {fileID: 474615884549285845, guid: 7f7180a36c289834bad153fb50ccb4d0, type: 3}
     musicIntro: {fileID: 0}
     musicLoop: {fileID: 0}
     sfx: {fileID: 0}
-  gameSceneName: GameScene
+  - dialogText: "\xA1Cacharreemos a ver como funciona!"
+    sceneImage: {fileID: 474615884549285845, guid: 7f7180a36c289834bad153fb50ccb4d0, type: 3}
+    musicIntro: {fileID: 0}
+    musicLoop: {fileID: 0}
+    sfx: {fileID: 8300000, guid: e37003a85656abd41ba48a918630df3b, type: 3}
+  gameSceneName: OtterVsRats
   charactersPerSecond: 40
   sceneHasMusic: 1
   musicIntroSource: {fileID: 959922650}
@@ -780,7 +832,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 138
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -848,7 +900,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -945,7 +997,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
